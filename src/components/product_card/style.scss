@@ -1,0 +1,49 @@
+.product {
+  flex: 1 0 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+
+  .picture {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .review {
+    display: none;
+  }
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  &--banner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 0.5px solid #ff6347;
+    border-radius: 12px;
+
+    .review{
+        display: flex;
+        gap: 10px;
+    }
+
+    .title {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+  }
+
+  &--default {
+    border: none;
+    border-radius: 8px;
+
+    .title {
+      font-size: 1.5rem;
+      color: #333;
+    }
+  }
+}
