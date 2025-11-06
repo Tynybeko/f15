@@ -1,18 +1,21 @@
+import React, { createContext, useState } from 'react'
+import Button from './components/UI/Button'
+import { Route, Routes } from 'react-router';
+import Home from './pages/Home';
+import About from './pages/About';
+import NotFound from './pages/NotFound';
+import MainLayout from './layout/MainLayout';
 import './App.css'
-import LatestRecipe from './components/latest_recipe/LatestRecipe'
-import ProductBanner from './components/product_banner/ProductBanner'
-import ProductCard from './components/product_card/ProductCard'
 
-function App() {
 
+export default function App() {
   return (
-    <>
-      <section className='container'>
-        <ProductBanner />
-        <LatestRecipe />
-      </section>
-    </>
+    <Routes>
+      <Route path='/' element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path='about' element={<About />} />
+      </Route>
+      <Route path='*' element={<NotFound />} />
+    </Routes>
   )
 }
-
-export default App
