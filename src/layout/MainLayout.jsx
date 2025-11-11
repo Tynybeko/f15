@@ -8,7 +8,7 @@ export default function MainLayout() {
     <div className='flex flex-col min-h-screen'>
         <Header/>
         <main className='flex-1'>
-        <Outlet/>
+        <Outlet context={'Hello COntect'}/>
         </main>
         <Footer/>
     </div>

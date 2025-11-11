@@ -12,9 +12,9 @@ const navLinks = [
     href: '/about',
     title: 'About'
   },
-   {
-    id: 3,
-    href: '/info',
+  {
+    id: 4,
+    href: '/about/info',
     title: 'Info'
   },
 ]
